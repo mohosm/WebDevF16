@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Máté Mohos</title>
+    <meta name="Mate Mohos" content="Mohos, Máté Mohos, CV, Portfolio, projects, articles">
+	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <!-- Now load MixItUp (wont work if we dont load JQ first) -->
+    <script type="text/javascript" src="jquery.mixitup.min.js"></script>
+    <!-- Custom Scripts -->
+    <script type="text/javascript">
+    // This is the shorthand version of jQuery's document ready functio
+
+    $(function() {
+        
+        $("#reset").click(function(event){
+            $("#Container").mixItUp('filter', '');
+        });
+        // Instantiate MixItUpHere
+        $("#Container").mixItUp({
+            load:{
+                filter:'' //this is your default filter, try changing it to all
+            },
+            controls:{
+                toggleFilterButtons:false, //allows for more than 1 filter button to be selected at a time. try changing to false
+                toggleLogic:'or' // when more than 1 button is selected, show only the items that have BOTH filters, try changind this to OR
+            },
+            animation:{
+                enable:true,
+                effects:'fade scale stagger rotateX',
+                duration: 600,
+                easing: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)'
+            }
+        });
+    });
+
+    </script>
+	<style type="text/css">
+	/* Any screen over 1024px wide will have the defaults applied */
+
+    *{
+        padding: 0;
+        margin: 0 auto;
+        font-family: 'Gloria Hallelujah', cursive;
+    }
+    .clear-fix:after {
+        display: block;
+        clear: both;
+        /* ensure some older compatability */
+        height: 0;
+        font-size: 0;
+        content: " ";
+        /* extra backup */
+        visibility: hidden;
+    }
+
+    nav{
+        font-weight: bold;
+        position: absolute;
+        left: 5%;
+        width: 90%;
+        background: none;
+        color: black;
+            padding-bottom: 20px;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+    nav h1{
+
+        position: relative;
+        line-height: 40px;
+        max-width: 40%;
+        float: left;
+        font-size: 25px;
+        margin: 10px;
+        color: black;
+        margin-left: 70px;
+    }
+
+    nav h3 {
+        position: absolute;
+        float: left;
+        color: black;
+        margin-left: 100px;
+        padding-top: 10px;
+        font-size: 15px;
+    }
+    nav ul{
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 15px;
+        max-width: 80%;
+        display: block;
+        float: right;
+        line-height: 60px;
+
+    }
+    nav ul li{
+        display: block;
+        float: left;
+        color: black;
+    }
+
+    nav ul li a{
+        display: block;
+        text-align: center;
+        padding:12px;
+        margin: 0;
+        text-decoration: none;
+        color: black;
+    }
+    nav ul li a:hover{
+    color: white;
+    background-color: rgb(165, 42, 42);
+
+    }
+
+nav ul ul{
+    display: none;
+}
+nav ul li:hover > ul{
+            display: inline-block;
+            position: absolute;
+            text-align: center;
+            border-bottom-style: solid;
+            padding-bottom: 0;
+            
+        }
+
+
+        nav ul ul li{
+            position: relative;
+
+           width: 80px;
+              background-color: white;
+        }
+        .abli{
+            width: 80px;
+        }
+        .wrli{
+            width: 130px;
+        }
+        .dali{
+            width: 130px;
+        }
+
+ nav ul ul li:hover{
+        background-color: rgba(255, 255, 255, 1);
+        color: black;
+    }
+    .main{
+        position: absolute;
+        border-top-style: solid;
+        border-color: black;
+        width: 90%;
+        left: 5%;
+        top: 83px;
+        color: black;
+
+    }
+    .ab{
+        width: 80px;
+    }
+    .wr{
+        right:380px;
+        width: 130px;
+    }
+    .da{
+        width: 130px;
+        right:250px;
+    }
+    .main h1{
+         margin-top: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+    .main-co{
+        margin-top: 50px;
+        position: relative;
+        left: 10%;
+        width: 80%;
+        border-color: gray;
+        height: 300px;
+    }
+    .main-co img{
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        clip: rect(0px,1000px,300px,0px);
+    }
+#foot{
+    letter-spacing: 2px;
+    font-size: 13px;
+    bottom: 0;
+    position: fixed;
+    left: 8%;
+    width: 84%;
+    height: 30px;
+    background-color: white;
+    color: black;
+    border-top-style: solid;
+    padding: 10px;
+    padding-bottom: 50px;
+}
+#foot img{
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+}
+
+#foot img:hover{
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+}
+.footright{
+    position: absolute;
+    right: 5%;
+}
+.footleft
+{
+
+    position: absolute;
+    left: 2%;
+}
+
+
+.dropbtn:hover{
+    color: white;
+}
+
+
+.container{
+        padding-top: 5%;
+        text-align: justify;
+        font-size: 0.1px;
+        background-color: white;
+        min-height: 20px;
+        position: absolute;
+        padding-bottom: 10%;
+    }
+
+    .container:after{
+        content: '';
+        display: inline-block;
+        width: 100%;
+    }
+
+    .container .mix,
+    .container .gap{
+        display: inline-block;
+        width: 60%;
+        height: 20px;
+    }
+    .container .mix{
+        position: relative;
+        text-align: left;
+        background-color: white;
+        margin-bottom: 2%;
+        display: none;
+        left: 10%;
+        width: 80%;
+        height: 250px;
+    }
+    .container .mix:after{
+        color: white;
+        font-size: 16px;
+        display: inline-block;
+        vertical-align: top;
+        padding: 4%;
+        font-weight: 300;
+        
+    }
+    
+
+
+    .container .mix:before{
+        
+        content: '';
+        display: inline-block;
+
+    }
+        .view {
+        /*z-index:9;*/
+        cursor: default;
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+        box-shadow: 0 0 3px #ddd;
+    }
+    
+    .view .mask,
+    .view .content {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+    }
+    
+    .view img {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 250px;
+    }
+    
+    .view h2 {
+        text-transform: uppercase;
+        color: #fff;
+        text-align: right;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding:20px;
+        font-size: 22px;
+        text-shadow: none;
+        border-radius: 20px 0 0 0;
+
+    }
+    .view h2:hover{
+                background: rgb(165, 42, 42);
+                color: white;
+                cursor: pointer;
+
+    }
+    .view h3{
+        text-transform: uppercase;
+        color: black;
+        font-size: 22px;
+        position: relative;
+        text-align: center;
+        padding-top: 15px;
+    }
+    
+    .view p {
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-size: 14px;
+        position: relative;
+        color: #fff;
+        padding: 10px 20px 5px;
+        text-align: center;
+    }
+    
+    
+    /*CSS3 Hover Effect*/
+
+    /* set up transitions for hover */   
+    .view-portfolio img {
+/*         left: 10px;
+        margin-left: -10px; */
+        position: relative;
+        -webkit-transition: all 0.6s ease-in-out;
+        -moz-transition: all 0.6s ease-in-out;
+        -o-transition: all 0.6s ease-in-out;
+        -ms-transition: all 0.6s ease-in-out;
+        transition: all 0.6s ease-in-out;
+    }
+
+    
+    /* Transitions for mask div with text, default hide our text and links */
+    .view-portfolio .mask {
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+        -ms-transition: all 0.5s linear;
+        transition: all 0.5s linear;
+        -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        opacity: 0;
+    }
+
+    
+    .view-portfolio h2 {
+        color: #333;
+
+        background: transparent;
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -o-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+        -ms-transition: all 0.5s linear;
+        transition: all 0.5s linear;
+        -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        opacity: 0;
+    }
+    
+    .view-portfolio p {
+        line-height: 30px;
+        letter-spacing: 0.2;
+        color: #333;
+        -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        opacity: 0;
+        font-size: 14px;
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -o-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+        -ms-transition: all 0.5s linear;
+        transition: all 0.5s linear;
+    }
+    
+ 
+    /* zoom and rotate image on hover */
+    .view-portfolio:hover img {
+        -webkit-transform: scale(2) rotate(10deg);
+        -moz-transform: scale(2) rotate(10deg);
+        -o-transform: scale(2) rotate(10deg);
+        -ms-transform: scale(2) rotate(10deg);
+        transform: scale(2) rotate(10deg);
+        -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=30)";
+        filter: alpha(opacity=30);
+        opacity: 0.3;
+    }
+    
+    /* show mask div on hover */
+    .view-portfolio:hover .mask {
+        -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        filter: alpha(opacity=100);
+        opacity: 1;
+    }
+
+
+    /* show mask div content scale from 0 to 1, and opacity from 0 to 1 */
+   .view-portfolio:hover h2,
+    .view-portfolio:hover p,
+    .view-portfolio:hover a.info {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -o-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        filter: alpha(opacity=100);
+        opacity: 1;
+    }  
+	</style>
+</head>
+
+<body>
+    <div id="Container" class="main container">
+    <div class="mix webdev" data-myorder="1">
+            <div class="view view-portfolio">
+                <img  src="img/1.jpg" alt="" />
+                <div class="mask">
+                    <h2>Read More >></h2>
+                    <h3>Title of work<h3>
+                    <p>At vero eos et accusamus et iusto odio dignissimos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+                </div>
+            </div>
+    </div>
+    <div class="mix photo" data-myorder="2">
+        <div class="view view-portfolio">
+                <img  src="img/2.jpg" alt="" />
+                <div class="mask">
+                    <h2>Read More >></h2>
+                    <h3>Title of work<h3>
+                    <p>At vero eos et accusamus et iusto odio dignissimos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+                </div>
+            </div>
+    </div>
+    <div class="mix video" data-myorder="3">
+        <div class="view view-portfolio">
+                <img  src="img/3.jpg" alt="" />
+                <div class="mask">
+                    <h2>Read More >></h2>
+                    <h3>Title of work<h3>
+                    <p>At vero eos et accusamus et iusto odio dignissimos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+                </div>
+            </div>
+    </div>
+    <div class="mix journalism" data-myorder="4">
+        <div class="view view-portfolio">
+                <img  src="img/4.jpg" alt="" />
+                <div class="mask">
+                    <h2>Read More >></h2>
+                    <h3>Title of work<h3>
+                    <p>At vero eos et accusamus et iusto odio dignissimos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+                </div>
+            </div>
+    </div>
+    <div class="mix creative" data-myorder="5">
+        <div class="view view-portfolio">
+                <img  src="img/5.jpg" alt="" />
+                <div class="mask">
+                    <h2>Read More >></h2>
+                    <h3>Title of work<h3>
+                    <p>At vero eos et accusamus et iusto odio dignissimos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+                </div>
+            </div>
+    </div>
+    <div class="mix webdev" data-myorder="6">
+        <div class="view view-portfolio">
+                <img  src="img/6.jpg" alt="" />
+                <div class="mask">
+                    <h2>Read More >></h2>
+                    <h3>Title of work<h3>
+                    <p>At vero eos et accusamus et iusto odio dignissimos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+                </div>
+            </div>
+    </div>
+    <div class="mix photo" data-myorder="7">
+        <div class="view view-portfolio">
+                <img  src="img/7.jpg" alt="" />
+                <div class="mask">
+                    <h2>Read More >></h2>
+                    <h3>Title of work<h3>
+                    <p>At vero eos et accusamus et iusto odio dignissimos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+                </div>
+            </div>
+    </div>
+    <div class="mix video" data-myorder="8">
+        <div class="view view-portfolio">
+                <img  src="img/8.jpg" alt="" />
+                <div class="mask">
+                    <h2>Read More >></h2>
+                    <h3>Title of work<h3>
+                    <p>At vero eos et accusamus et iusto odio dignissimos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+                </div>
+            </div>
+    </div>
+    <div class="mix journalism" data-myorder="9">
+        <div class="view view-portfolio">
+                <img  src="img/9.jpg" alt="" />
+                <div class="mask">
+                    <h2>Read More >></h2>
+                    <h3>Title of work<h3>
+                    <p>At vero eos et accusamus et iusto odio dignissimos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+                </div>
+            </div>
+    </div>
+    <div class="mix creative" data-myorder="10">
+        <div class="view view-portfolio">
+                <img  src="img/10.jpg" alt="" />
+                <div class="mask">
+                    <h2>Read More >></h2>
+                    <h3>Title of work<h3>
+                    <p>At vero eos et accusamus et iusto odio dignissimos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+                </div>
+            </div>
+    </div>
+    <div class="mix webdev" data-myorder="11">
+        <div class="view view-portfolio">
+                <img  src="img/11.jpg" alt="" />
+                <div class="mask">
+                    <h2>Read More >></h2>
+                    <h3>Title of work<h3>
+                    <p>At vero eos et accusamus et iusto odio dignissimos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+                </div>
+            </div>
+    </div>
+    <div class="mix photo" data-myorder="12">
+        <div class="view view-portfolio">
+                <img  src="img/12.jpg" alt="" />
+                <div class="mask">
+                    <h2>Read More >></h2>
+                    <h3>Title of work<h3>
+                    <p>At vero eos et accusamus et iusto odio dignissimos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+                </div>
+            </div>
+    </div>
+    <div class="mix video" data-myorder="13">
+        <div class="view view-portfolio">
+                <img  src="img/13.jpg" alt="" />
+                <div class="mask">
+                    <h2>Read More >></h2>
+                    <h3>Title of work<h3>
+                    <p>At vero eos et accusamus et iusto odio dignissimos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+                </div>
+            </div>
+    </div>
+    <div class="mix journalism" data-myorder="14">
+        <div class="view view-portfolio">
+                <img  src="img/11.jpg" alt="" />
+                <div class="mask">
+                    <h2>Read More >></h2>
+                    <h3>Title of work<h3>
+                    <p>At vero eos et accusamus et iusto odio dignissimos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+                </div>
+            </div>
+    </div>
+    <div class="mix creative" data-myorder="15">
+        <div class="view view-portfolio">
+                <img  src="img/13.jpg" alt="" />
+                <div class="mask">
+                    <h2>Read More >></h2>
+                    <h3>Title of work<h3>
+                    <p>At vero eos et accusamus et iusto odio dignissimos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+                </div>
+            </div>
+    </div>
+    <div class="gap"></div>
+    </div>
+
+
+<header>
+<nav class="clear-fix">
+    <h1>Máté Mohos</h1>
+    <br/>
+    <h3>(writer, programmer, etc.)</h3>
+<ul>
+    <li><a class="dropbtn">Writing</a>
+    <ul class="wr">
+        <li class="wrli"><a href="#" class="filter" data-filter=".journalism">Journalism</a></li>
+        <li class="wrli"><a href="#"class="filter" data-filter=".creative">Creative</a></li>
+    </ul>
+    </li>
+    <li><a class="dropbtn">Digital Art</a>
+<ul class="da">
+        <li class="dali" ><a href="#" class="filter" data-filter=".photo">Photo</a></li>
+        <li class="dali" ><a href="#" class="filter" data-filter=".video">Video</a></li>
+    </ul>
+    </li>
+
+    <li ><a href="#" class="filter" data-filter=".webdev">Web Development</a></li>
+    <li><a class="dropbtn">About</a>
+    <ul class="ab">
+        <li class="abli"><a href="#">Bio</a></li>
+        <li class="abli"><a href="#">CV</a></li>
+    </ul>
+</li>
+</ul>
+</nav>
+</header>
+
+
+<div id="foot">
+    <p class="footleft">Find me on social media</p>
+    <p class="footright">
+Máté Mohos 2016
+</p>
+<br/>
+<a href="https://www.facebook.com/mohos.ur"><img src="fb.png"></a>
+<a href="https://twitter.com/birdmanofchina"><img src="tw.png"></a>
+<a href="https://www.linkedin.com/in/mate-mohos-227943100"><img src="li.png"></a>
+<a href="https://www.instagram.com/mohos.png/"><img src="in.png"></a>
+<a href="https://inkpine.tumblr.com/"><img src="tu.png"></a>
+</div>
+
+
+
+
+</body>
+</html>
