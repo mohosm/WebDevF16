@@ -1,6 +1,9 @@
 # WebDevF16
 Intro to web development 2016 stuff
 
+here's the link to my blog:
+http://sites.bxmc.poly.edu/~matemohos/WebDev/
+
 midterm proposal:
 http://sites.bxmc.poly.edu/~matemohos/WebDev/index.php/2016/12/21/midterm-proposal-retrospect/
 midterm documentation:
